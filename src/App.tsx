@@ -1,11 +1,14 @@
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { LobbyView, RoomView } from "./pages";
 
-function App() {
-
+const App = () => {
   return (
-    <>  
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<LobbyView />} />
+      <Route path="/room/:roomUUID" element={<RoomView />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
